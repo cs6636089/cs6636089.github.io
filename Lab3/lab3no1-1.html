@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Lab3no1.1</title>
+    <style type="text/css">
+
+        input:invalid {
+            border: red solid 4px;
+        }
+
+        input,
+        input:valid {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>1.1 จงสร้าง Form โดยเลือกใช้ Input Type ที่เหมาะสม</h3>
+    <form action="form-echo.php" method="get">
+
+        <div>
+            <label>1. ชื่อเต็ม/ย่อของสาขาวิชา :</label>
+            <input
+                type="text"
+                name="major"
+                placeholder="ชื่อเต็ม/ย่อของสาขาวิชา">
+        </div>
+        
+        <div>
+            <label>2. จำนวนเงินที่จะโอน :</label>
+            <input
+                type="number"
+                name="money"
+                placeholder="จำนวนเงินที่จะโอน"
+                min="0.01"
+                step="0.01">
+        </div>
+
+        <div>
+            <label>3. อาหารที่ชื่นชอบ 5 ชนิดที่ชื่นชอบจากมากไปน้อย :</label><br>
+            <input
+                type="text"
+                name="food1"
+                placeholder="อารหารที่ชื่นชอบอันดับที่ 1"><br>
+            <input
+                type="text"
+                name="food2"
+                placeholder="อารหารที่ชื่นชอบอันดับที่ 2"><br>
+            <input
+                type="text"
+                name="food3"
+                placeholder="อารหารที่ชื่นชอบอันดับที่ 3"><br>
+            <input
+                type="text"
+                name="food4"
+                placeholder="อารหารที่ชื่นชอบอันดับที่ 4"><br>
+            <input
+                type="text"
+                name="food5"
+                placeholder="อารหารที่ชื่นชอบอันดับที่ 5">
+        </div>
+        
+        <div>
+            <label>4. ค่าไฟฟ้า 3 เดือนที่ผ่านมา :</label><br>
+            <input
+                type="number"
+                name="month1"
+                placeholder="ค่าไฟเดือนที่ 1"
+                min="0"
+                step="0.01"><br>
+            <input
+                type="number"
+                name="month2"
+                placeholder="ค่าไฟเดือนที่ 2"
+                min="0"
+                step="0.01"><br>
+            <input
+                type="number"
+                name="month3"
+                placeholder="ค่าไฟเดือนที่ 3"
+                min="0"
+                step="0.01">
+        </div>
+
+        <div>
+            <label>5. รหัสบัตรประชาชน :</label>
+            <input
+                type="text"
+                name="idcard"
+                placeholder="รหัสบัตรประชาชน 13 หลัก"
+                pattern="\d{13}"
+                minlength="13"
+                maxlength="13">
+        </div>
+        
+        <div>
+            <label>6. ความพึงพอใจของหนังสือเล่มนี้ : </label>0
+            <input
+                type="range"
+                name="rating"
+                min="0"
+                max="5"
+                value="3">5
+            <label>(0 = น้อยที่สุด และ 5 = มากที่สุด)</label>
+        </div>
+        
+        <div>
+            <label>7. อาการป่วย :</label><br>
+            <textarea 
+                name="symptom"
+                placeholder="อาการป่วย"
+                cols="45"
+                rows="5"></textarea>
+        </div>
+        
+        <div>
+            <label>8. ในช่วง 3 เดือนที่ผ่านมา เคยได้รับวัคซีนหรือไม่ :</label>
+            <input
+                type="radio"
+                name="vaccine"
+                value="yes">เคย
+            <input
+                type="radio"
+                name="vaccine"
+                value="no">ไม่เคย
+        </div>
+        
+        <div>   
+            <label>9. เวลาเริ่มเข้าเรียนและเวลาสิ้นสุดการเรียน :</label>
+            <input
+                type="time"
+                name="start-time">
+            <input
+                type="time"
+                name="end-time">
+        </div>
+        
+        <div>
+            <label>10. วันเวลาที่ต้องไปพบแพทย์ :</label>
+            <input
+                type="datetime-local"
+                name="appointment">
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
